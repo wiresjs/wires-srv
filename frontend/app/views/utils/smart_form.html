@@ -1,0 +1,23 @@
+<div class="content">
+   <div class="description">
+      <form class="ui form" ws-submit="{{ $__okay() }}">
+
+         <!-- *** Repeating forms here ********************************************* -->
+         <div class="fields" ws-repeat="$field in $fields">
+            <div ws-repeat="$item in $field" class="$item.cls wide field">
+               <label>$item.placeholder</label>
+
+               <!-- Regular input  ************************************************* -->
+               <input ws-if="{{ $item.type === 'input' }}" ws-value="{{ $parent.parent._bind($item.name) }}" type="text" placeholder="$item.placeholder">
+
+
+            </div>
+         </div>
+
+         <input style="display:none" type="submit" value="go">
+      </form>
+      <div class="ui error message" ws-if="{{ $data.$err }}">
+         $data.$err
+      </div>
+   </div>
+</div>

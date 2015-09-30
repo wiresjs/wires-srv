@@ -1,0 +1,27 @@
+<ui-header text="Access Tokens"></ui-header>
+
+<button ws-click="{{ $showAddTokenModal() }}" class="ui basic button">
+  <i class="icon user"></i>
+  Add New Token
+</button>
+
+
+<!-- The listing -->
+<table class="ui celled striped table">
+  <thead>
+    <tr>
+   <th colspan="3">
+      Tokens
+    </th>
+  </tr></thead><tbody>
+    <tr ws-repeat="$token in $tokens">
+      <td class="collapsing">
+        <a href="#"><i class="pencil icon" ws-click="{{ $parent.edit($token) }} "></i></a>
+        <a href="#"><i class="remove icon" ws-click="{{ $parent.removeToken($token) }}"></i></a>
+      </td>
+      <td>$token.tag</td>
+      <td>$token.hash</td>
+    </tr>
+
+  </tbody>
+</table>

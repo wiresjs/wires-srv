@@ -1,0 +1,14 @@
+<div class="ui left menu">
+   <div class="item">
+      <img class="ui mini image" src="/static/img/logo.jpg">
+   </div>
+   <a ws-repeat="$item in $menu.userMenu" class="item" ws-click="{{ $parent.menu.nav($item) }}" ws-class="{{ {'active' : $item.active } }}"> <i class="$item.icon icon"></i> $item.title
+   </a>
+
+   <div class="right menu">
+      <a class="item" href="/admin/logout"> <i class="sign out icon"></i> Sign out</a>
+   </div>
+</div>
+<section id="content">
+
+</section>

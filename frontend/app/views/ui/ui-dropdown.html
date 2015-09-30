@@ -1,0 +1,16 @@
+<div class="ui selection dropdown visible input" ws-click="{{ $menuClicked(target, event) }}" tabindex="0">
+   <input type="hidden" name="card[type]">
+   <div class="text" ws-if="{{ $selectedItem }}">
+      <i ws-if="{{ $icon }}" class="$icon icon"></i> {{ $selectedItem }}
+   </div>
+   <div class="text" ws-if="{{ !$selectedItem }}">
+      [$placeholder]
+   </div>
+   <i class="dropdown icon"></i>
+   <div class="menu" style="display: none !important;">
+      <div ws-repeat="$item in $items" class="item">
+         <i ws-if="{{ $parent.icon }}" selected="{{ $parent.isSelected($item) }}" class="$parent.icon icon"></i> {{ $parent.getValue($item) }}
+      </div>
+
+   </div>
+</div>

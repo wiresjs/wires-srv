@@ -1,0 +1,57 @@
+.sane-editor {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ececec;
+}
+.sane-editor .toolbar {
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  background: #ececec;
+  border-bottom: 1px solid #282828;
+  z-index: 5;
+}
+.sane-editor .toolbar ul {
+   margin: 2px;
+   padding: 4px;
+}
+.sane-editor .toolbar li {
+ display: inline-block;
+ padding-right: 10px;
+ color:black;
+}
+.sane-editor .toolbar li a {
+   color:black;
+   padding: 5px;
+}
+.sane-editor .toolbar li a:hover {
+   text-decoration: none;
+   background-color: black;
+   color:white;
+}
+.sane-editor .content {
+  padding: 7px 10px;
+
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.4em;
+  min-height: 150px;
+  height: auto;
+  outline: 0!important;
+}
+.sane-editor .content {
+   position: relative;
+}
+.sane-editor .user-content {
+   padding-top: 10px;
+   border: 1px solid white;
+}
+.sane-editor .user-content:hover {
+   border: 1px solid #ececec;
+}
+.sane-editor .user-controls {
+   position: absolute;
+   right:20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Watson MORRR</title>
+
+   <!-- BEGIN META -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="the button">
+   <meta name="description" content="Watson">
+   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+   <link type="text/css" rel="stylesheet" href="/static/css/dist/semantic.min.css">
+   <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+   <style type="text/css"></style>
+</head>
+<style media="screen">
+body {
+
+   background: -moz-linear-gradient(45deg, rgba(245,150,255,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
+   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(245,150,255,1)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
+   background: -webkit-linear-gradient(45deg, rgba(245,150,255,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
+   background: -o-linear-gradient(45deg, rgba(245,150,255,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
+   background: -ms-linear-gradient(45deg, rgba(245,150,255,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
+   background: linear-gradient(45deg, rgba(245,150,255,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#F596FF',GradientType=1 ); /* ie6-9 */
+}
+</style>
+<body>
+
+
+      <div class="ui middle aligned grid login-form">
+         <div class="column">
+            <div class="ui center aligned page grid">
+               <div class="eight wide  column">
+                  <div class="ui left aligned segment">
+                     <h4 class="ui">Log in</h4>
+                     <form action="/admin/login" id="loginForm">
+                        <div class="ui loging form">
+                           <div class="field">
+                              <label for="username">Username:</label>
+                              <div class="ui icon input">
+                                 <input type="text" placeholder="Username" name="email" id="username" /> <i class="user icon"></i>
+
+                              </div>
+                           </div>
+                           <div class="field">
+                              <label for="password">Password:</label>
+                              <div class="ui icon input">
+                                 <input type="password" placeholder="Password" name="password" id="password" /> <i class="lock icon"></i>
+
+                              </div>
+                           </div>
+                           <input type="submit" name="submit" class="ui inverted blue button" />
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+
+
+   <script src="/bower/jquery/dist/jquery.min.js"></script>
+   <script src="/bower/lodash/lodash.js"></script>
+
+
+   <script>
+      $("#loginForm").submit(function(event) {
+
+         // Stop form from submitting normally
+         event.preventDefault();
+
+         // Get some values from elements on the page:
+         var $form = $(this)
+         var email = $form.find("input[name='email']").val();
+         var password = $form.find("input[name='password']").val();
+         url = $form.attr("action");
+
+         // Send the data using post
+         var posting = $.post(url, {
+            email: email,
+            password: password
+         });
+
+         // Put the results in a div
+         posting.done(function(data) {
+           window.location.href = "/admin/";
+         });
+      });
+   </script>
+</body>
+
+</html>

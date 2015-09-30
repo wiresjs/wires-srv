@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Data Server</title>
+
+   <!-- BEGIN META -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="the button">
+   <meta name="description" content="TheButton">
+   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link type="text/css" rel="stylesheet" href="/static/css/dist/semantic.min.css">
+   <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+      <link type="text/css" rel="stylesheet" href="/static/css/editor.css">
+
+   <style type="text/css"></style>
+</head>
+<body>
+   <div class="modal-placeholder"></div>
+   <section>
+   </section>
+
+
+
+   <script src="/views.js"></script>
+   <script src="/bower/jquery/dist/jquery.min.js"></script>
+   <script src="/bower/lodash/lodash.js"></script>
+   <script src="/bower/wires.js/dist/wires.js"></script>
+   <script src="/bower/velocity/velocity.min.js"></script>
+   <script src="/static/js/sane.editor.js"></script>
+   {{js|raw}}
+   <script>
+      window.myself = {{userJson|raw}};
+   </script>
+   <script src="/app/app.js"></script>
+</body>
+</html>

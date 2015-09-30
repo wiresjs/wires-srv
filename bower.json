@@ -1,0 +1,22 @@
+{
+   "name": "dashboard",
+   "version": "0.0.0",
+   "homepage": "https://github.com/nchanged/thebutton",
+   "authors": [
+      "Ivan.Orlov <ivan@morrr.com>"
+   ],
+   "license": "MIT",
+   "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+   ],
+   "dependencies": {
+      "jquery": "~2.1.4",
+      "wires.js": "~0.5.62",
+      "lodash": "~3.10.1",
+      "velocity": "~1.2.2"
+   }
+}

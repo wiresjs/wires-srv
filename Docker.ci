@@ -1,0 +1,26 @@
+@cleanup
+
+# Database for application
+@run
+	image 				: mongo:3.0.6
+	name  				: watson_mongo
+ 	wait    			   : logs_match -> '.*waiting for connections on port 27017.*'
+	mount [if db]     : ${db}		-> /data/db
+	mount [if dumps]  : ${dumps}	-> /dumps
+	ports      		   : ${mongoport|27017} -> 27017
+	cmd   [if auth]	: mongod --auth
+
+@build
+	tag   : watson_app
+	path  : .
+	cache : true
+
+@rm-f watson_app
+
+@run
+	env 			: NODE_ENV -> ${env|development}
+	image 		: watson_app
+	name  		: watson_app
+	link  		: watson_mongo -> mongo
+	daemon 		: true
+   ports       : ${port|80} -> 3000

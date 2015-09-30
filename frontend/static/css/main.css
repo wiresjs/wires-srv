@@ -1,0 +1,123 @@
+body {
+
+}
+h1, h2, h3, h3, h4, h5, h5, h6, p {
+   min-height: auto;
+}
+#content {
+   padding: 15px;
+}
+.simple-form {
+   width: 600px;
+   padding: 20px;
+   border: 1px solid #D8D8D8;
+}
+ui-dropdown {
+
+   display: block;
+}
+.pagination .active {
+   font-weight: bold !important;
+   border-top: 1px solid orange !important;
+}
+.admin-devider {
+   border-left: 2px solid #3b679e;
+   margin-left: 10px;
+   padding-left: 10px;
+}
+#preview{
+   font-size: 16px;
+   line-height: 22px;
+}
+.top-header {
+   height: 65px;
+
+   color:white;
+   font-size: 16px;
+   padding-left: 15px;
+
+   background: #3b679e; /* Old browsers */
+   background: -moz-linear-gradient(top,  #3b679e 0%, #6a77c4 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3b679e), color-stop(100%,#6a77c4)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  #3b679e 0%,#6a77c4 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  #3b679e 0%,#6a77c4 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  #3b679e 0%,#6a77c4 100%); /* IE10+ */
+   background: linear-gradient(to bottom,  #3b679e 0%,#6a77c4 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#6a77c4',GradientType=0 ); /* IE6-9 */
+
+
+   font-family: 'Raleway', sans-serif;
+}
+.main-menu {
+
+   font-size: 15px !important;
+}
+
+.logo-text {
+   font-family: 'Jura', sans-serif;
+   font-size: 14px;
+   line-height: 65px;
+   margin-left: 210px;
+}
+.logo {
+
+   background-image: url(/static/img/logo.jpg);
+   width: 40px;
+   background-size: cover;
+   background-position: center;
+   height: 40px;
+}
+.parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.login-form {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ui.standard.modal.full-width {
+   position: fixed !important;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   margin: 3.5rem auto;
+   display: flex !important;
+   flex-direction: column;
+}
+.ui.modal.full-width>.actions {
+   flex: 0 0 calc(1rem + 46px);
+}
+.inner-modal-content {
+   padding: 15px;
+   overflow: hidden;
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+}
+.inner-modal-content .sane-editor,
+.inner-modal-content .preview {
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+.inner-modal-content .preview {
+   padding: 10px;
+   border: 1px solid #ececec;
+   overflow-y: scroll;
+}
+.inner-modal-content .sane-editor .toolbar {
+   flex: 0 0 35px;
+}
+.inner-modal-content .sane-editor .content {
+   flex: 1 1 auto;
+   overflow-x: hidden;
+   overflow-y: scroll;
+}
+.modal-placeholder:not(:empty) + section {
+   height: 100vh !important;
+   overflow: hidden;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "wires.js",
+  "main": "index.js",
+  "version": "0.5.62",
+  "homepage": "https://github.com/wiresjs/wires.js",
+  "authors": [
+    "Ivan.Orlov <ivan@morrr.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "external",
+    "app",
+    "test",
+    "tests"
+  ],
+  "_release": "0.5.62",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.5.62",
+    "commit": "b3b67f4d092eb5dab2917df05835513a70b56cd8"
+  },
+  "_source": "git://github.com/wiresjs/wires.js.git",
+  "_target": "~0.5.62",
+  "_originalSource": "wires.js"
+}
